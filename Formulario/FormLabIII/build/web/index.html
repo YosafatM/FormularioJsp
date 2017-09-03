@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/CSSForm.css" rel="StyleSheet">
+        <script>
+            function soloCadena(e) {
+                var keynum;
+                if (window.event)
+                    keynum = e.keyCode;
+                else
+                if (e.which)
+                    keynum = e.wich;
+                if ((keynum >= 48 && keynum <= 57) || keynum === !8)
+                    return false;
+                else
+                    return true;
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <form method="post" action="JSP/Alta.jsp">
+                <ul class="form-style-1">
+                    <li><label>Nombre Completo <span class="required">*</span></label><br>
+                        <input type="text" name="nombre" class="field-divided" placeholder="Nombres" onkeypress="return soloCadena(event)" required/>&nbsp;<br><br>
+                        <input type="text" name="apellidop" class="field-divided" placeholder="Apellido Paterno" onkeypress="return soloCadena(event)" required/><br><br>
+                        <input type="text" name="apellidom" class="field-divided" placeholder="Apellido Materno" onkeypress="return soloCadena(event)" required/><br><br></li>
+                    <li>
+                        <label>Escuela <span class="required">*</span></label>
+                        <input type="text" name="escuela" placeholder="Escuela" class="field-long" required />
+                    </li>
+                    <li>
+                    <li>
+                        <input type="submit" value="Enviar"  />
+                    </li>
+                </ul>
+            </form>
+
+
+        </div>
+    </body>
+</html>
